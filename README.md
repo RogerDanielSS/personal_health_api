@@ -22,3 +22,9 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+User.create(name: 'Ganso')
+
+Category.create(name: 'Exame', dynamic_fields_attributes: [{name: 'Data'}])
+
+Item.create(category_id: 1, title: 'Exame de sangue', fields: {Data: '01/02/2002'})
