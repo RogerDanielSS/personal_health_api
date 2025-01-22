@@ -30,7 +30,6 @@ class UsersController < ApplicationController
       return render json: @user.errors, status: :unprocessable_entity
     end
 
-
     render :show, status: :ok
   end
 
