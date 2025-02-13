@@ -13,6 +13,7 @@ gem 'puma', '~> 5.0'
 gem 'jbuilder', '~> 2.7'
 # Implement safe users tables
 gem 'devise'
+gem 'devise-jwt'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
