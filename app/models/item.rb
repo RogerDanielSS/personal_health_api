@@ -1,7 +1,7 @@
 class Item < ApplicationRecord
   belongs_to :category  
 
-  validate :validate_fields_format
+  # validate :validate_fields_format
 
   private
 
