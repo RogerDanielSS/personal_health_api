@@ -3,6 +3,10 @@
 namespace :populate_database do
   desc 'Create Default States'
 
+  task users: :environment do
+    User.create({ email: 'phganso@email.com', password: '12345678', name: 'Paulo Henrique Ganso' })
+  end
+
   task categories: :environment do
     Category.find_or_create_by({ name: 'Exame de sangue' })
   end
