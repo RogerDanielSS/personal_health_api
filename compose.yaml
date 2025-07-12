@@ -6,6 +6,8 @@ services:
       - "3000:3000"
     depends_on:
       - db
+    volumes:
+      - .:/app  # This mounts current directory to /app in container
     environment:
       DATABASE_URL: "postgres://postgres:mysecretpassword@db:5432/your_app_development"
     #   - RAILS_ENV=test
