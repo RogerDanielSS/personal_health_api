@@ -1,5 +1,5 @@
 # Use an official Ruby image as the base image
-FROM ruby:3.0.1
+FROM ruby:3.1.4
 
 # Install dependencies as root first
 RUN apt-get update -qq && apt-get install -y build-essential libpq-dev nodejs
