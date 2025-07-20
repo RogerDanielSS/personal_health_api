@@ -9,6 +9,21 @@ class ItemsController < ApplicationController
     render json: @items
   end
 
+  # GET users_user/items
+  def current_user_items
+    @items = current_user.items
+
+    render json: @items
+  end
+
+  # GET users/:user_id/items
+  def user_items
+    user = User.find(params['user_id'])
+    @items = user.items
+
+    render json: @items
+  end
+
   # GET /items/1
   def show
     render json: @item

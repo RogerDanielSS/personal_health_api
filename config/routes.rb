@@ -5,4 +5,8 @@ Rails.application.routes.draw do
   resources :items
   resources :dynamic_fields
   resources :categories
+
+
+  get 'current_user/items', action: :current_user_items, controller: 'items'
+  get 'users/:user_id/items', action: :current_user_items, controller: 'items'
 end
