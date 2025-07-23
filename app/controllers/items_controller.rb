@@ -9,7 +9,7 @@ class ItemsController < ApplicationController
     render json: @items
   end
 
-  # GET users_user/items
+  # GET /my_items
   def current_user_items
     @items = current_user.items
 
