@@ -8,5 +8,5 @@ Rails.application.routes.draw do
 
 
   get 'my_items', action: :current_user_items, controller: 'items'
-  get 'users/:user_id/items', action: :current_user_items, controller: 'items'
+  get 'users/:user_id/items', action: :user_items, controller: 'items'
 end
