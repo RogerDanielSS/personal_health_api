@@ -8,6 +8,22 @@ class CategoriesController < ApplicationController
     render json: @categories
   end
 
+  # GET /my_categories
+  def current_user_categories
+    @categories = current_user.categories
+
+    render json: @categories
+  end
+
+  # GET users/:user_id/categories
+  def user_categories
+    user = User.find(params['user_id'])
+    @categories = user.categories
+
+    render json: @categories
+  end
+
+
   # GET /categories/1
   def show
     render json: @category
