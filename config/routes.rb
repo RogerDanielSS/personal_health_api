@@ -9,4 +9,7 @@ Rails.application.routes.draw do
 
   get 'my_items', action: :current_user_items, controller: 'items'
   get 'users/:user_id/items', action: :user_items, controller: 'items'
+
+  get 'my_categories', action: :current_user_categories, controller: 'categories'
+  get 'users/:user_id/categories', action: :user_categories, controller: 'categories'
 end
