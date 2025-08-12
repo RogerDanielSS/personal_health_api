@@ -1,0 +1,1 @@
+json.extract! dynamic_field, :id, :name, :data_type

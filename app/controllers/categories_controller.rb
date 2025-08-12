@@ -5,14 +5,14 @@ class CategoriesController < ApplicationController
   def index
     @categories = Category.all
 
-    render json: @categories
+    render :index, status: :ok
   end
 
   # GET /my_categories
   def current_user_categories
     @categories = current_user.categories
 
-    render json: @categories
+    render :index, status: :ok
   end
 
   # GET users/:user_id/categories
@@ -20,13 +20,12 @@ class CategoriesController < ApplicationController
     user = User.find(params['user_id'])
     @categories = user.categories
 
-    render json: @categories
+    render :index, status: :ok
   end
-
 
   # GET /categories/1
   def show
-    render json: @category
+    render :show, status: :ok
   end
 
   # POST /categories
