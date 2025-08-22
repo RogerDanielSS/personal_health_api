@@ -13,8 +13,4 @@ class DynamicField < ApplicationRecord
       content.to_f.to_s == content
     end
   end
-
-  def decimal?(str)
-    str.match?(/^\d*\.?\d+$|^\d+\.\d*$/)
-  end
 end
