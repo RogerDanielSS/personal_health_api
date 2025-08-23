@@ -8,7 +8,7 @@ class ItemValidator < ActiveModel::Validator
 
     record.category.dynamic_fields.each do |field|
       content = record.fields[field.name]
-      record.errors.add :fields, 'Invalid fields' unless field.validate(content)
+      record.errors.add :fields, "Invalid field: #{field.name}" unless field.validate(content)
     end
   end
 end
