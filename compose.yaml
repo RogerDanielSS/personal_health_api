@@ -4,6 +4,8 @@ services:
     command: bundle exec rails s -b '0.0.0.0'
     ports:
       - "3000:3000"
+    tty: true # added once conteiner weren't pausing at binding.pry. access it in another terminal with docker compose attach api 
+    stdin_open: true # added once conteiner weren't pausing at binding.pry. access it in another terminal with docker compose attach api
     depends_on:
       - db
     volumes:
