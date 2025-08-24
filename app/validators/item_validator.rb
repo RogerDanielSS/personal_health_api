@@ -4,7 +4,7 @@ class ItemValidator < ActiveModel::Validator
     used_keys = record.fields.keys
     possible_fields = Category.last.dynamic_fields.pluck(:name)
 
-    record.errors.add :fields, 'Invilid field key detected' if possible_fields.union(used_keys).length != possible_fields.length
+    record.errors.add :fields, 'Invalid field key detected' if possible_fields.union(used_keys).length != possible_fields.length
 
     record.category.dynamic_fields.each do |field|
       content = record.fields[field.name]
